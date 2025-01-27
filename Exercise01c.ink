@@ -2,78 +2,78 @@ VAR health = 5
 VAR pet_name = ""
 VAR torches = 0
 VAR hunger = 0
-VAR coins = 1
+VAR vines = 1
 
--> kidnap
+-> abduct
 
-== kidnap ==
-One night, you are awaken from deep slumber to the sound of screeching tires outside. You go to look out the window, only to discover a group of men rushing inside your house. You rush to grab your pet. Before you can hide, the men spot you. They quickly restrain you with handcuffs and blindfolds. What do you choose to do next? 
+== abduct ==
+One night, you are awaken from a deep sleep to a light so bright it pierces through your closed eyes. Blinded and afraid, you feel yourself begin to float! Seconds pass- maybe a minute. Higher and higher you go. When will this all be over?! Crash... you fall hard onto a cold metallic floor. As your vision restores, you are able to make out a few large egg shapes. Are they green? Oh no... ALIENS! What do you choose to do next? 
 
 + [ fight back ] -> fight 
 + [succumb] -> succumb
 
 == fight ==
-You kick and punch with all of your energy. You hear one of the men scream. Good, I might have a chance, you think to yourself. This thought is soon halted when you feel a stabbing pain in your left thigh. Warmth trickles down your leg. Your thoughts subside and your eyes become heavy.
+You kick and punch with all of your energy yet none of them are the slightest bit startled. Can they not feel pain? While contemplating escape plans, one of the aliens spits a neon goo onto your arm. As the sludge slides down your body, you thoughts subside and your eyes become heavy.
 -> wake_up
 
 == succumb
-After you inhale a heavy mist, your vision and mind go blank.
+The tallest alien pulls a lever and a heavy gas spills out from vents all around you. After you inhale the heavy mist, your vision and mind go blank.
 -> wake_up
 
 == wake_up ==
-You wake up to the feeling of gravel below you. Your handcuffs are off, and there is no sign of the kidnappers. You take off your blindfold and discover you are at the enterance to a cavern. 
+You wake up to the feeling of dirt below you. When you look around, there are no signs of the aliens. As you pick yourself up, something feels wierd... did you lose 50 pounds? You try to take a step forward but your leg is moving oddly slow. Oh no- LOW GRAVITY!
 
 + [move onwards] -> move_onwards
-* [run away] -> run_away
+* [panic] -> panic
 
-== run_away ==
-You pick up your pet and run as fast as you can into the nearby woods with the hopes to find someone who can help. After the daylight runs out, you lose hope. You hear rumbling behind you. No, to the left. No, above you. Before you even have time to think, a bobcat emerges. He mawls you and your pet. 
+== panic ==
+You realize you are not on Earth any longer. You are all by yourself on a foreign planet! With nobody else in sight! No sigm of life. Your chest becomes tight, your vision goes blurry, your head is building immense pressure. You can hardly stand anymore. Your legs begin to wobble and your body loses all strength.  
 
 -> death
 
 
 
 == move_onwards== 
-You walk toward the cave.
+You walk toward a river.
 -> memory
 
 == memory ==
-Before you stands the cavern of Josh. You are glad your pet is with you. It is less intimidating. What is your pet's name?
+Before you stands a lush waterfall. Off in the distance, you hear what sounds like a bark. A three-eyed puppy runs out wagging its tail. The new environment is less intimidating now. What is your pet's name?
 
-* [Charlie] 
-    ~ pet_name = "Charlie" 
-    -> cave_mouth
-* [Susan]
-    ~ pet_name = "Susan"
-    -> cave_mouth
-* [Spot]
-    ~ pet_name = "Spot"
-    -> cave_mouth
+* [Scout] 
+    ~ pet_name = "Scout" 
+    -> waterfall
+* [Marty]
+    ~ pet_name = "Marty"
+    -> waterfall
+* [Blue]
+    ~ pet_name = "Blue"
+    -> waterfall
 
--> cave_mouth
+-> waterfall
 
-== cave_mouth ==
-You are at the enterance to a cave. As soon as you step through, a boulder seals the enterance behind you. All falls dark. {not torch_pickup:There is a torch on the floor.} The cave extends to the east and west. 
-+ [Take the east tunnel] -> east_tunnel
-+ [Take the west tunnel] -> west_tunnel
+== waterfall ==
+You step toward the edge of the waterfall and see lush forests of fruitiful trees down below. Your mouth waters at the thought of sweet fruit. Suddenly, a breeze picks up behind you causing you to lose your balance. You fall forward off the edge. You wake up and it is night. How did you not die on impact? Must be because of the low gravity. At your feet lays a torch {not torch_pickup:There is a torch on the floor.} There is a path illuminated before you splitting to the east and west 
++ [walk the east path] -> east_path
++ [walk the west path] -> west_path
 * [Pick up the torch] -> torch_pickup
 
 
-== east_tunnel ==
-You are in the east tunnel. It is very dark, you can't see anything. 
-* [Light Torch] -> east_tunnel_lit 
-+ [Go back] -> cave_mouth
+== east_path ==
+You are in the east path. The area starts to dim. It is very dark, you can't see anything. You remember the torch you found earlier. 
+* [Light Torch] -> east_path_lit 
++ [Go back] -> waterfall
 -> END
 
-== west_tunnel ==
-You are in the west 
-{ pet_name == "Spot": Scout would love it here in the west| }
-* [Move Onwards] -> encounter_bats
-+ [Go back] -> cave_mouth
+== west_path ==
+You are in the west. It gets darker and darker as you walk. Fear of what may lie ahead begins to crowd your mind. 
+{ pet_name == "Scout": Scout would protect me if something bad happened... right?| }
+* [Move Onwards] -> encounter_bugs
++ [Go back] -> waterfall
 -> END 
 
-== encounter_bats ==
-You have stumbled into a swarm of bats.
+== encounter_bugs ==
+You are walking when you hear a crack on the ground. Did you maybe step on a twig? Not thinking much of it, you take another step. The floor caves beneath you. With nobody around to hear your screams, tears well up in your eyes. You hear buzzing in all directions. Poke, jab, stab. Fiery needles are piercing all over your skin. Unearthly bugs swarm your body. Painful and slow, you collapse. 
 + [Fight the bats] -> death
 
 == death == 
@@ -82,32 +82,32 @@ You try to fight off the bats, but there are too many of them. There are bites a
 
 === torch_pickup ===
 You now have a torch. May it light the way. 
-* [Go back] -> cave_mouth
+* [Go back] -> waterfall
 -> END
 
-== gather_coins ==
-You take as many coins as you can hold. As you look around at all of the coins, you notice a coin slot. The coin slot takes a dime sized piece, but all of the ones you have found so far are the size of a quarter. 
+== pick_fruit ==
+You pick as many berries as you can hold. As you look around at all of the trees, you notice one much taller than the others. Rather than a yellow white glow, it radiates purple. You now aim to retrieve the purple berries. How will you get up there?
 
--> dime_search
+-> rope_search
 
-== dime_search == 
-You scower the cave for a dime size coin. After what seems like hours, you have no luck. All seems to be failing until you notice that the slot has a message written on it. It says: Tiny and round, lost in the ground, light in weight, I am a treasure to be found, Shiny and small, in pockets I hide, I am often kept by your side. You think about what this might mean. Ground! That's it, you will look at the ground. As you search the floor, you find a pair of overalls. Pockets! You search the pockets. In the back right pocket, you are thrilled to find a shiny dime sized coin.
+== rope_search == 
+You scower the area for something to climb up on. After what seems like hours, you have no luck. All seems to be failing until you notice a thick vine in the distance. You get to the vine and tug on it in opposite ways. Good... its sturdy. You use a sharp rock to sever the far end. You wind the vine around your arm.
 
-You have {coins} coin
+You have {vines} vine
 
-* [Put the coin through the slot] ->  coin_slot
+* [Throw the vine around a high branch] ->  climb_tree
 
-== coin_slot == 
-You race over to see what will happen when you put the coin in the slot. You place the coin and sin the knob. It makes a lottery machine noise. The walls of the cave expand and light begins to peek through. You feel more free than you ever have in your life! 
-* {coins > 0 } [You have reached the goal!] -> win_game
+== climb_tree == 
+You race over to see what will happen when you climb up the tree. You throw the vine as high as you can in hopes that it will tie around the branch, but with no success it floats back to the ground. Just a little bit higher now! You toss the vine up with all your might and it revolves around the branch twice. You wrap your body around to climb up. -Exercise is muuch lower in low gravity!- You climb above the rest of the normal trees. Things look pretty from high up on this planet. You are nearing the purple tree now. Reaching one arm outward, you pick a cluster of the purple berries. Curious and hungry, you toss one in your mouth. Remarkably sweet, yet tart, the berries are quite addictive. What was the point of climbing up here? Why are these ones purple? Nothing is happening. Amidst your frustration, the sun starts to peek through the leaves below you. Alas, you have made it through the night. 
+* {vines > 0 } [Changed attitude] -> resolution
 
 
-== east_tunnel_lit == 
-The light of your torch glints off of the thousands of coins in the cave. 
-* [Take all of the coins] -> gather_coins 
-+ [Go back] -> cave_mouth
+== east_path_lit == 
+The light of your torch triggers the fruit growing on the trees around you. That must have been what was lighting the path earlier- the fruits retain light. You strategize what can keep things lit until dawn.  
+* [Pick fruit] -> pick_fruit 
++ [Go back] -> waterfall
 -> END
 
-== win_game == 
-You have won the prize of freedom and riches. Though you faced hardships and triumph, you feel satisfied. Congratulations. 
+== resolution == 
+While this planet is lonesome, you appreciate the beauty that Earth could not offer. Maybe the aliens weren't ill-intentioned, though they did abduct you. Surrounding you are endless views of lush gardens, foreign agriculture, and pools of water. In the daylight, you even notice other puppies running in the distance. This new life is intriguing... what else are you yet to discover?  
 -> END
