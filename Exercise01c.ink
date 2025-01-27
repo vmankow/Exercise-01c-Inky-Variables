@@ -53,7 +53,7 @@ Before you stands a lush waterfall. Off in the distance, you hear what sounds li
 -> waterfall
 
 == waterfall ==
-You step toward the edge of the waterfall and see lush forests of fruitiful trees down below. Your mouth waters at the thought of sweet fruit. Suddenly, a breeze picks up behind you causing you to lose your balance. You fall forward off the edge. You wake up and it is night. How did you not die on impact? Must be because of the low gravity. At your feet lays a torch {not torch_pickup:There is a torch on the floor.} There is a path illuminated before you splitting to the east and west 
+You step toward the edge of the waterfall and see lush forests of fruitiful trees down below. Your mouth waters at the thought of sweet fruit. Suddenly, a breeze picks up behind you causing you to lose your balance. You fall forward off the edge. You wake up and it is night. How did you not die on impact? Must be because of the low gravity. {not torch_pickup:There is a torch on the floor.} There is a path illuminated before you splitting to the east and west 
 + [walk the east path] -> east_path
 + [walk the west path] -> west_path
 * [Pick up the torch] -> torch_pickup
@@ -74,7 +74,7 @@ You are in the west. It gets darker and darker as you walk. Fear of what may lie
 
 == encounter_bugs ==
 You are walking when you hear a crack on the ground. Did you maybe step on a twig? Not thinking much of it, you take another step. The floor caves beneath you. With nobody around to hear your screams, tears well up in your eyes. You hear buzzing in all directions. Poke, jab, stab. Fiery needles are piercing all over your skin. Unearthly bugs swarm your body. Painful and slow, you collapse. 
-+ [Fight the bats] -> death
++ [Fight the bugs] -> death
 
 == death == 
 You try to fight off the bats, but there are too many of them. There are bites all over your body. You feel warmth everywhere, but you have never been so cold before. You die. 
